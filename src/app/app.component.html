@@ -1,0 +1,55 @@
+<section class="container-fluid d-flex justify-content-center align-items-center main-container">
+
+  <div class="calculator card">
+
+    <input type="text" id="digit" class="calculator-screen z-depth-1 pe-2" readonly />
+
+    <div class="calculator-keys">
+
+      <button type="button" data-mdb-button-init class="operator btn btn-info" value="+" onclick="
+        currentValue+= '+';
+        document.querySelector('#digit').value=currentValue">+</button>
+      <button type="button" data-mdb-button-init class="operator btn btn-info" value="-" onclick="currentValue+='-';
+      document.querySelector('#digit').value = currentValue">-</button>
+      <button type="button" data-mdb-button-init class="operator btn btn-info" value="*" onclick="currentValue+='*';
+      document.querySelector('#digit').value = currentValue">&times;</button>
+      <button type="button" data-mdb-button-init class="operator btn btn-info" value="/" onclick="currentValue+='/';
+      document.querySelector('#digit').value= currentValue;">&divide;</button>
+
+      <button type="button" data-mdb-button-init value="7" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='7';
+      document.querySelector('#digit').value = currentValue;">7</button>
+      <button type="button" data-mdb-button-init value="8" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='8';
+      document.querySelector('#digit').value = currentValue">8</button>
+      <button type="button" data-mdb-button-init value="9" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='9';
+      document.querySelector('#digit').value=currentValue;">9</button>
+
+
+      <button type="button" data-mdb-button-init value="4" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='4';
+      document.querySelector('#digit').value=currentValue">4</button>
+      <button type="button" data-mdb-button-init value="5" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='5';
+      document.querySelector('#digit').value=currentValue;">5</button>
+      <button type="button" data-mdb-button-init value="6" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='6';
+      document.querySelector('#digit').value = currentValue;">6</button>
+
+
+      <button type="button" data-mdb-button-init value="1" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='1';
+      document.querySelector('#digit').value = currentValue;">1</button>
+      <button type="button" data-mdb-button-init value="2" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+=2;document.querySelector('#digit').value=currentValue;">2</button>
+      <button type="button" data-mdb-button-init value="3" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='3';
+      document.querySelector('#digit').value = currentValue">3</button>
+
+
+      <button type="button" data-mdb-button-init value="0" data-mdb-ripple-init class="btn btn-light waves-effect" onclick="currentValue+='0';
+      document.querySelector('#digit').value = currentValue;">0</button>
+      <button type="button" data-mdb-button-init class="decimal function btn btn-secondary" value="." onclick="currentValue+='.';
+      document.querySelector('#digit').value = currentValue;">.</button>
+      <button type="button" data-mdb-button-init class="all-clear function btn btn-danger btn-sm" value="all-clear" onclick="currentValue=' ';
+      document.querySelector('#digit').value = currentValue">AC</button>
+
+      <button type="button" data-mdb-button-init class="equal-sign operator btn btn-default" value="=" onclick="
+      let result = eval(currentValue);
+      document.querySelector('#digit').value = result">=</button>
+
+    </div>
+  </div>
+</section>
